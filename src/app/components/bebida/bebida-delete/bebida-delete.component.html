@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-title>
+    Excluir Bebida
+  </mat-card-title>
+
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" 
+      [value]="bebida.name" name="name"
+      disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Preço (R$)" 
+      [value]="bebida.price" name="price"
+      disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Volume" 
+      [value]="bebida.volume" name="volume" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Imagem" 
+      [value]="bebida.img" name="img" disabled>
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="deleteBebida()" color="warn">
+    Excluir
+  </button>
+  
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
+
+

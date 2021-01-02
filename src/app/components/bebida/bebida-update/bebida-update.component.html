@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-title>
+    Alterar Bebida
+  </mat-card-title>
+
+  <form>
+    <mat-form-field>
+      <input matInput placeholder="Nome" 
+      [(ngModel)]="bebida.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Volume" 
+      [(ngModel)]="bebida.volume" name="volume">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Imagem" 
+      [(ngModel)]="bebida.img" name="img">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Preço (R$)" 
+      [(ngModel)]="bebida.price" name="price">
+    </mat-form-field>
+  </form>
+
+  <button mat-raised-button (click)="updateBebida()" color="primary">
+    Atualizar
+  </button>
+  
+  <button mat-raised-button (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
+
